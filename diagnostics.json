@@ -1,0 +1,189 @@
+{
+  "metrics": {
+    "train_rows": 7933,
+    "test_rows": 1401,
+    "holdout_rows": 1401,
+    "full_rows": 9334,
+    "database_rows_with_valid_q_and_hm0": 9334,
+    "r2_log10_sq": 0.9123288620862146,
+    "mae_log10_sq": 0.22850043651516763,
+    "median_ae_log10_sq": 0.14747285449309255,
+    "rmse_log10_sq": 0.34248823661123384,
+    "r2_sq": 0.9381351697925222,
+    "mae_sq": 0.0006703075371836865,
+    "median_ae_sq": 9.376836151317816e-05,
+    "r2_q_lpsm": 0.985629067361029,
+    "mae_q_lpsm": 0.10945912330995122,
+    "median_ae_q_lpsm": 0.01094936193062945,
+    "rmse_q_lpsm": 0.6836608105046287,
+    "bias_q_lpsm": -0.02201969795185577,
+    "sq_floor": 1e-09,
+    "n_models": 50,
+    "hidden_layers": [
+      192,
+      96,
+      48,
+      24
+    ],
+    "max_iter": 100000,
+    "random_state": 42,
+    "test_size": 0.15,
+    "n_engineered_features": 26,
+    "mlp_alpha": 0.0003,
+    "mlp_learning_rate_init": 0.00075,
+    "mlp_validation_fraction": 0.12,
+    "mlp_n_iter_no_change": 20,
+    "saved_model_refit_on_full_dataset": true,
+    "holdout_target_mean_log10_sq": -3.586333948880572,
+    "holdout_target_std_log10_sq": 1.1708045657851622,
+    "full_target_mean_log10_sq": -3.5852967678190186,
+    "full_target_std_log10_sq": 1.1686996400223806
+  },
+  "metadata": {
+    "database_path": "database.csv",
+    "model_type": "Bagged MLPRegressor ensemble on log10(sq) with engineered hydraulic features",
+    "feature_columns": [
+      "m",
+      "b",
+      "h",
+      "Hm0 toe",
+      "Tm-1,0 toe",
+      "ht",
+      "Bt",
+      "gf",
+      "cotad",
+      "cotau",
+      "B",
+      "hb",
+      "Rc",
+      "Ac",
+      "Gc",
+      "Lm-1,0 toe",
+      "L0 toe",
+      "wave_steepness",
+      "sqrt_wave_steepness",
+      "xi_m10_lower",
+      "xi_m10_upper",
+      "h_over_Lm10_toe",
+      "Hm0_toe_over_Lm10_toe",
+      "ht_over_Hm0_toe",
+      "Bt_over_Lm10_toe",
+      "B_over_Lm10_toe",
+      "hb_over_Hm0_toe",
+      "Rc_over_Hm0_toe",
+      "Ac_over_Hm0_toe",
+      "Gc_over_Lm10_toe",
+      "h_over_Hm0_toe",
+      "Bt_over_Hm0_toe",
+      "B_over_Hm0_toe",
+      "Gc_over_Hm0_toe",
+      "freeboard_sum_over_Hm0_toe",
+      "Rc_over_Ac",
+      "Bt_over_B",
+      "beta_abs",
+      "cos_beta",
+      "sin_beta_abs",
+      "gf_cos_beta"
+    ],
+    "base_feature_columns": [
+      "m",
+      "b",
+      "h",
+      "Hm0 toe",
+      "Tm-1,0 toe",
+      "ht",
+      "Bt",
+      "gf",
+      "cotad",
+      "cotau",
+      "B",
+      "hb",
+      "Rc",
+      "Ac",
+      "Gc"
+    ],
+    "target_column": "sq",
+    "target_definition": "sq = q / sqrt(g * Hm0_toe^3)",
+    "diagnostic_target_definition": "y = (log10(sq) - mu) / sigma",
+    "target_units": "-",
+    "reported_prediction_units": {
+      "sq": "-",
+      "q_m3_per_s_per_m": "m^3/s/m",
+      "q_l_per_s_per_m": "l/s/m"
+    }
+  },
+  "feature_ranges": {
+    "m": {
+      "min": 6.0,
+      "max": 1000.0
+    },
+    "b": {
+      "min": 0.0,
+      "max": 80.0
+    },
+    "h": {
+      "min": 0.016,
+      "max": 9.32
+    },
+    "Hm0 toe": {
+      "min": 0.017,
+      "max": 3.765
+    },
+    "Tm-1,0 toe": {
+      "min": 0.665,
+      "max": 10.64
+    },
+    "ht": {
+      "min": 0.0,
+      "max": 7.78
+    },
+    "Bt": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "gf": {
+      "min": 0.33,
+      "max": 1.0
+    },
+    "cotad": {
+      "min": 0.0,
+      "max": 7.07
+    },
+    "cotau": {
+      "min": -5.0,
+      "max": 9.71
+    },
+    "B": {
+      "min": 0.0,
+      "max": 8.0
+    },
+    "hb": {
+      "min": -0.175,
+      "max": 1.175
+    },
+    "Rc": {
+      "min": 0.0,
+      "max": 8.345
+    },
+    "Ac": {
+      "min": 0.0,
+      "max": 7.87
+    },
+    "Gc": {
+      "min": 0.0,
+      "max": 5.6
+    }
+  },
+  "plot_paths": {
+    "holdout_fit_y": "plots\\holdout_fit_y.png",
+    "holdout_fit_sq": "plots\\holdout_fit_sq.png",
+    "holdout_fit_q_lpsm": "plots\\holdout_fit_q_lpsm.png",
+    "holdout_residuals_y": "plots\\holdout_residuals_y.png",
+    "holdout_residual_histogram_y": "plots\\holdout_residual_histogram_y.png",
+    "full_fit_y": "plots\\full_fit_y.png",
+    "full_fit_sq": "plots\\full_fit_sq.png",
+    "full_fit_q_lpsm": "plots\\full_fit_q_lpsm.png",
+    "full_residuals_y": "plots\\full_residuals_y.png",
+    "full_residual_histogram_y": "plots\\full_residual_histogram_y.png"
+  }
+}
