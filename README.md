@@ -3,10 +3,7 @@
 This manual brings together **overtopping theory**, **dimensional
 analysis**, **EurOtop context**, **neural-network methodology**,
 **recent machine-learning interpretation**, and a **full operator
-manual** for the current Python implementation. Throughout the
-text, references are cited inline in the form requested by the user, for
-example **(van der Meer et al., 2018)** or **(van Gent et al., 2007)**,
-and **no bibliography section is included**.
+manual** for the current Python implementation.
 
 ## 1. Purpose, scope, and how this manual should be used
 
@@ -1070,8 +1067,7 @@ clearly, which is a strong practical feature of the current workflow.
 **Because the model is trained on sq rather than directly on q, it
 learns relative overtopping intensity after normalising by wave
 height.** This tends to help transferability across conditions where the
-absolute discharge changes strongly with $H_{m0,\mathrm{toe}}$. In effect, the model is
-asked first to learn how intense overtopping is relative to the
+absolute discharge changes strongly with $H_{m0,\mathrm{toe}}$. In effect, the model is asked first to learn how intense overtopping is relative to the
 wave-height scaling, and only afterwards to reconstruct the dimensional
 discharge.
 
