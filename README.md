@@ -39,21 +39,10 @@ saved production model that is later used for prediction.
 Instead, it is a manual that places the current workflow into the
 broader overtopping framework represented by **EurOtop** and subsequent
 neural-network and machine-learning work. In practice, that means the
-text below repeatedly compares three layers of understanding:
+text below compares three layers of understanding:
 **classical overtopping physics**, **official ANN/XGB overtopping tools
 from the literature**, and **the exact custom implementation in the
 project Python files**.
-
-**How to use this manual in practice.** A first-time user should read
-Sections 2 to 8 in sequence. An experienced operator who mainly needs
-procedures may jump directly to Sections 9 and 10. A reviewer who needs
-to verify whether a prediction is credible should focus on Sections 8,
-11, and 12, plus Appendix E. A developer who intends to maintain or
-extend the workflow should pay particular attention to the sections
-describing **target definition**, **engineered features**, **ensemble
-construction**, **holdout diagnostics**, and **full-data refit**.
-
-> **Warning. Reading rule for safe engineering use.** Whenever the manual says **"prediction"**, read that as **"model estimate conditioned on the calibration data and on the assumptions encoded in the inputs"**. It does **not** mean physical truth. The more the input scenario departs from the training domain, the more the prediction becomes an extrapolation rather than an interpolation.
 
 ## 2. Executive technical summary
 
